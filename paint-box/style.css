@@ -9,7 +9,7 @@ body {
   font-family: "Cormorant Garamond", serif;
   color: #414141;
   font-weight: 300;
-  font-size: 36px;
+  font-size: 40px;
 }
 a:link,
 a:visited,
@@ -20,6 +20,16 @@ a:active {
 }
 ul {
   list-style: none;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+img {
+  vertical-align: top;
+  border: 0;
 }
 
 #header,
@@ -43,6 +53,7 @@ ul {
   height: 52px;
   padding: 0 24px;
   box-sizing: border-box;
+  outline: none;
   transition: background 0.3s;
 }
 .btn.btn-nobox {
@@ -59,6 +70,9 @@ ul {
 .wrap {
   padding: 0 140px;
   box-sizing: border-box;
+}
+.fa-arrow-right {
+  font-size: 16px;
 }
 
 /* header */
@@ -83,6 +97,13 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.header-box:last-child ul li:last-child {
+  margin-top: -4px;
+}
+.header-box:last-child .fa-shopping-bag {
+  font-size: 16px;
+  margin-right: 8px;
 }
 
 /* section */
@@ -126,7 +147,7 @@ ul {
   width: 50%;
 }
 
-/* section - visual1 */
+/* section - visual-top */
 .visual-box.visual-top .visual__txt {
   color: #fff;
 }
@@ -158,11 +179,7 @@ ul {
   width: 74%;
 }
 
-.block-box .block-box__txt .btn .icon-arrow {
-  font-size: 16px;
-}
-
-/* section - block1 */
+/* section - block-studio */
 #section .block-box.block-studio {
   height: 516px;
 }
@@ -257,7 +274,7 @@ ul {
   text-decoration: underline;
 }
 
-/* section - list1 */
+/* section - list-polish */
 .list-box.list-polish .list-box__cnt {
   display: flex;
   justify-content: space-between;
@@ -269,12 +286,12 @@ ul {
   display: none;
 }
 
-/* section - visual2 */
+/* section - visual-gift */
 #section .visual-box.visual-gift .txt-wrap p {
   opacity: 1;
 }
 
-/* section - list2 */
+/* section - list-tip */
 .list-box.list-tip .list-box__cnt {
   display: flex;
   flex-direction: column;
@@ -299,7 +316,10 @@ ul {
   width: 84px;
 }
 
-/* section block2 */
+/* section - block-jounal */
+#section .block-box-wrap {
+  margin-bottom: 80px;
+}
 #section .block-box-wrap article {
   margin-bottom: 0;
 }
@@ -318,6 +338,63 @@ ul {
 .block-journal .block-box__txt .btn-nobox:hover .icon-arrow {
   opacity: 1;
   transform: translateX(6px);
+}
+
+/* section list-join */
+#section .list-box.list-join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-join .list-box__top {
+  width: 702px;
+  margin-bottom: 80px;
+}
+.list-join .list-box__top p {
+  width: 96%;
+  text-align: center;
+}
+.list-join .list-box__top .input-box__email {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #9d9d9c;
+}
+.list-join .list-box__top .input-box__email .input-email {
+  border: 0;
+  flex-grow: 1;
+  outline: none;
+  font-size: 36px;
+  font-family: "Cormorant Garamond";
+  font-weight: 300;
+}
+.list-join .list-box__top .input-box__email .input-email::placeholder {
+  font-size: 36px;
+  font-family: "Cormorant Garamond";
+  font-weight: 300;
+  opacity: 0.6;
+}
+.list-join .list-box__top .input-box__email .btn {
+  width: 44px;
+  height: 44px;
+}
+.list-join .list-box__cnt .list-box__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 106px;
+}
+.list-join .list-box__cnt .list-box__item .list-box__img {
+  width: 25%;
+}
+.list-join .list-box__cnt .list-box__item .list-box__img img {
+  width: 100%;
+}
+.list-join .list-box__cnt .list-box__follow {
+  text-align: center;
+}
+.list-join .list-box__cnt .list-box__follow .link__instagram {
+  color: #9d9d9c;
 }
 
 /* footer */
