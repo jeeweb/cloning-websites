@@ -9,6 +9,7 @@ body {
   font-family: "Cormorant Garamond", serif;
   color: #414141;
   font-weight: 300;
+  font-size: 36px;
 }
 a:link,
 a:visited,
@@ -27,7 +28,7 @@ ul {
   font-weight: 400;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 2px;
 }
 .italic {
@@ -37,9 +38,16 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #fff;
+  border: 1px solid #414141;
   width: 240px;
   height: 52px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color: #414141;
+  color: #fff;
 }
 .wrap {
   padding: 0 140px;
@@ -64,6 +72,19 @@ ul {
 }
 
 /* section */
+#section article {
+  margin-bottom: 80px;
+}
+#section .txt-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#section .txt-wrap p {
+  text-align: center;
+  padding: 32px 0 52px;
+  opacity: 0.85;
+}
 #section .visual-box {
   position: relative;
 }
@@ -84,18 +105,53 @@ ul {
   text-align: center;
   color: #fff;
   font-size: 50px;
-  opacity: 0.8;
 }
-.visual-box .visual__txt > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 52%;
+.visual-box .visual__txt .txt-wrap {
+  width: 50%;
 }
-.visual-box .visual__txt p {
-  padding: 32px 0 52px;
+
+.visual-box .visual__txt .btn {
+  border-color: #fff;
 }
 .visual-box .visual__txt .btn:hover {
   background: #fff;
   color: #414141;
+}
+
+#section .block-box {
+  display: flex;
+  height: 516px;
+}
+.block-box > div {
+  width: 50%;
+}
+.block-box .block-box__img img {
+  width: 100%;
+}
+.block-box .block-box__txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3ede8;
+}
+.block-box .block-box__txt .txt-wrap {
+  width: 70%;
+}
+.block-box .block-box__txt .btn-book {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 19px;
+}
+.block-box .block-box__txt .btn-book:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 52px;
+  height: 100%;
+  width: 1px;
+  background-color: #414141;
+}
+.block-box .block-box__txt .btn-book .icon-arrow {
+  font-size: 16px;
 }
