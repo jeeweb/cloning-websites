@@ -11,8 +11,6 @@
       <div class="svg">
         <svg
           class="svg--logo"
-          width="86"
-          height="30"
           viewBox="0 0 86 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +45,7 @@
       </a>
     </div>
 
-    <div class="grid-item section">
+    <div class="grid-item section section1">
       <div class="grid-sub-item">
         <a href="#" class="grid-item__link">
           <span class="grid-item__txt">#6</span>
@@ -74,12 +72,12 @@
         </a>
       </div>
     </div>
-    <div class="grid-item section">
+    <div class="grid-item section section2">
       <div class="image-preview">
         <img src="images/1-1barry_768x768.jpg" alt="" />
       </div>
     </div>
-    <div class="grid-item section">
+    <div class="grid-item section section3">
       <div class="grid-sub-item">
         <a href="#" class="grid-item__link">
           <span class="grid-item__txt">#1</span>
@@ -109,11 +107,13 @@
 
     <div class="grid-item footer"></div>
     <div class="grid-item footer">
-      <span class="footer__txt">
-        THIRTY-FOUR ARTISTS VISUALLY INTERPRET AND COUNTDOWN THEIR FAVORITE
-        ALBUMS OF 2019
-      </span>
-      <span>•</span>
+      <div class="footer-anim">
+        <span class="footer__txt">
+          THIRTY-FOUR ARTISTS VISUALLY INTERPRET AND COUNTDOWN THEIR FAVORITE
+          ALBUMS OF 2019
+        </span>
+        <span>•</span>
+      </div>
     </div>
     <div class="grid-item footer"></div>
 
@@ -213,6 +213,34 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+      const footTxt = document.querySelector('.footer .footer-anim');
+      const footTxtWidth = Math.floor(footTxt.getBoundingClientRect().width);
+      let footTranslateX = 0;
+
+      let increaseNum = setInterval(function () {
+        footTranslateX++;
+      }, 200);
+      //console.log(footTranslateX);
+      clearInterval(increaseNum, 5000);
+
+      function footAnim() {
+        footTxt.animate(
+          [
+            { transform: 'translateX(0px)' },
+            { transform: 'translateX(-' + footTranslateX + 'px)' },
+          ],
+          {
+            duration: 2000,
+            iterations: Infinity,
+          }
+        );
+        if (footTranslateX === 512) {
+        } else if (footTranslateX === footTxtWidth) {
+        }
+      }
+      footAnim();
+      //console.log(footTxt.getBoundingClientRect());
+    </script>
   </body>
 </html>
